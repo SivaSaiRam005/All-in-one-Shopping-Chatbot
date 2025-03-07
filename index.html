@@ -4,7 +4,6 @@
 <head>
     <title>Shopping & Travel Chatbot</title>
     <style>
-        /* Background Image for the Whole Website */
         body {
             font-family: Arial, sans-serif;
             text-align: center;
@@ -22,7 +21,7 @@
         .container {
             max-width: 600px;
             margin: auto;
-            background: rgba(0, 0, 0, 0.7); /* Darker for better visibility */
+            background: rgba(0, 0, 0, 0.7); 
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
@@ -46,30 +45,29 @@
             transform: scale(1.08);
         }
 
-        /* Category Button Colors */
+        
         .btn-clothing {
-            background-color: #FF69B4; /* Pink for Clothing */
+            background-color: #FF69B4; 
         }
 
         .btn-food {
-            background-color: #FF6347; /* Tomato for Food */
+            background-color: #FF6347; 
         }
 
         .btn-electronics {
-            background-color: #4682B4; /* Steel Blue for Electronics */
+            background-color: #4682B4; 
         }
 
         .btn-travel {
-            background-color: #32CD32; /* LimeGreen for Travel */
+            background-color: #32CD32; 
         }
 
-        /* Uniform Subtle Color for Website Buttons */
         .btn-website {
-            background-color: #87CEEB; /* Soft Pastel Blue */
+            background-color: #87CEEB; 
         }
 
         .btn-back {
-            background-color: #666; /* Dark Gray for Back */
+            background-color: #666; 
         }
     </style>
 </head>
@@ -79,7 +77,7 @@
     <div class="container">
         <h1>🛍️ Shopping & Travel Chatbot</h1>
 
-        <!-- Main Menu -->
+       
         <div id="mainMenu">
             <button class="btn btn-clothing" onclick="showOptions('clothing')">👗 Clothing</button>
             <button class="btn btn-food" onclick="showOptions('food')">🍔 Food</button>
@@ -99,7 +97,7 @@
     </div>
 
     <script>
-        // Website Links and Button Colors
+        
         const websites = {
             "clothing": [
                 { name: "Myntra", link: "https://www.myntra.com" },
@@ -129,7 +127,7 @@
             ]
         };
 
-        // Show Options Menu
+        
         function showOptions(category) {
             document.getElementById('mainMenu').style.display = 'none';
             document.getElementById('optionsMenu').style.display = 'block';
@@ -143,19 +141,18 @@
                 button.style.display = 'block';
             });
 
-            // Hide any unused buttons
+            
             for (let i = options.length; i < 5; i++) {
                 document.getElementById(`option${i + 1}`).style.display = 'none';
             }
         }
 
-        // Return to Main Menu
         function showMainMenu() {
             document.getElementById('mainMenu').style.display = 'block';
             document.getElementById('optionsMenu').style.display = 'none';
         }
 
-        // Open Website in New Tab
+        
         function openSite(url) {
             window.open(url, "_blank");
         }
