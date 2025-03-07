@@ -4,7 +4,7 @@
 <head>
     <title>All in One Shopping & Travel Chatbot</title>
     <style>
-        /* Background Image */
+        
         body {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             background-color: rgb(249, 221, 184);
@@ -29,8 +29,7 @@
             border-radius: 14px;
             box-shadow: 5px 10px 20px  rgba(0, 0, 0, 0.5);
         }
-
-        /* Button Styles */
+        
         .btn {
             display: block;
             width: 80%;
@@ -50,7 +49,6 @@
             transform: scale(1.08);
         }
 
-        /*  Button Colors */
         .btn-clothing {
             background-color: #c926e5; 
         }
@@ -67,7 +65,6 @@
             background-color: #1ebe1e; 
         }
 
-        /* Color for Website Buttons */
         .btn-website {
             background-color: #71c5e7; 
         }
@@ -83,7 +80,6 @@
     <div class="heading">
         <h1>🛍️ Shopping & Travel Chatbot</h1>
 
-        <!-- Main Menu -->
         <div id="mainMenu">
             <button class="btn btn-clothing" onclick="showOptions('clothing')">👗 Clothing</button>
             <button class="btn btn-food" onclick="showOptions('food')">🍔 Food</button>
@@ -91,7 +87,6 @@
             <button class="btn btn-travel" onclick="showOptions('travel')">✈️ Travel</button>
         </div>
 
-        <!-- Options Menu -->
         <div id="optionsMenu" style="display: none;">
             <button id="option1" class="btn btn-website" onclick="openSite('')"></button>
             <button id="option2" class="btn btn-website" onclick="openSite('')"></button>
@@ -103,7 +98,7 @@
     </div>
 
     <script>
-        // Website Links fo each individual company
+        
         const websites = {
             "clothing": [
                 { name: "Myntra", link: "https://www.myntra.com" },
@@ -147,19 +142,17 @@
                 button.style.display = 'block';
             });
 
-            // Hide any unused buttons
+            
             for (let i = options.length; i < 5; i++) {
                 document.getElementById(`option${i + 1}`).style.display = 'none';
             }
         }
-
-        // Return to Main Menu
+        
         function showMainMenu() {
             document.getElementById('mainMenu').style.display = 'block';
             document.getElementById('optionsMenu').style.display = 'none';
         }
 
-        // Open Website in New Tab
         function openSite(url) {
             window.open(url, "_blank");
         }
