@@ -1,1 +1,1 @@
-# Shopping-Chatbot
+# Shopping & Travel - Chatbot
