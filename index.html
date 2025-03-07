@@ -2,82 +2,88 @@
 <html lang="en">
 
 <head>
-    <title>Shopping & Travel Chatbot</title>
+    <title>All in One Shopping & Travel Chatbot</title>
     <style>
+        /* Background Image */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: rgb(249, 221, 184);
+            color: #2d2626;
             text-align: center;
-            background: url('https://source.unsplash.com/1600x900/?shopping') no-repeat center center fixed;
+            background-image: url('https://source.unsplash.com/1600x900/?shopping') no-repeat center center fixed;
             background-size: cover;
-            color: white;
-            padding-top: 50px;
+            color: rgb(255, 255, 255);
+            padding-top: 110px;
         }
 
         h1 {
-            font-size: 30px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            font-size: 50px;
+            text-shadow: 1px 2px 4px rgba(3, 3, 3, 0.8);
         }
 
-        .container {
-            max-width: 600px;
+        .heading {
+            max-width: 1000px;
             margin: auto;
-            background: rgba(0, 0, 0, 0.7); 
+            background: rgba(0, 0, 0, 0.3); 
             padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            border-radius: 14px;
+            box-shadow: 5px 10px 20px  rgba(0, 0, 0, 0.5);
         }
 
         /* Button Styles */
         .btn {
             display: block;
             width: 80%;
-            margin: 10px auto;
+            margin: 15px auto;
             padding: 15px;
-            font-size: 18px;
+            font-size: 20px;
             color: white;
-            border: none;
-            border-radius: 12px;
+            border-color: #2d2626;
+            border-width: 10;
+            border: 2px white;
+            border-radius: 10px;
             cursor: pointer;
-            transition: transform 0.3s, background 0.3s;
+            transition: transform 0.4s, background 0.4s;
         }
 
         .btn:hover {
             transform: scale(1.08);
         }
 
-        
+        /*  Button Colors */
         .btn-clothing {
-            background-color: #FF69B4; 
+            background-color: #c926e5; 
         }
 
         .btn-food {
-            background-color: #FF6347; 
+            background-color: #e94e33; 
         }
 
         .btn-electronics {
-            background-color: #4682B4; 
+            background-color: #3086cb; 
         }
 
         .btn-travel {
-            background-color: #32CD32; 
+            background-color: #1ebe1e; 
         }
 
+        /* Color for Website Buttons */
         .btn-website {
-            background-color: #87CEEB; 
+            background-color: #71c5e7; 
         }
 
         .btn-back {
-            background-color: #666; 
+            background-color: #6b6b6b; 
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
+    <div class="heading">
         <h1>🛍️ Shopping & Travel Chatbot</h1>
 
-       
+        <!-- Main Menu -->
         <div id="mainMenu">
             <button class="btn btn-clothing" onclick="showOptions('clothing')">👗 Clothing</button>
             <button class="btn btn-food" onclick="showOptions('food')">🍔 Food</button>
@@ -97,7 +103,7 @@
     </div>
 
     <script>
-        
+        // Website Links fo each individual company
         const websites = {
             "clothing": [
                 { name: "Myntra", link: "https://www.myntra.com" },
@@ -127,7 +133,7 @@
             ]
         };
 
-        
+        // Show Options Menu
         function showOptions(category) {
             document.getElementById('mainMenu').style.display = 'none';
             document.getElementById('optionsMenu').style.display = 'block';
@@ -141,18 +147,19 @@
                 button.style.display = 'block';
             });
 
-            
+            // Hide any unused buttons
             for (let i = options.length; i < 5; i++) {
                 document.getElementById(`option${i + 1}`).style.display = 'none';
             }
         }
 
+        // Return to Main Menu
         function showMainMenu() {
             document.getElementById('mainMenu').style.display = 'block';
             document.getElementById('optionsMenu').style.display = 'none';
         }
 
-        
+        // Open Website in New Tab
         function openSite(url) {
             window.open(url, "_blank");
         }
